@@ -25,7 +25,9 @@
 }
 
 .footer__logo-icon {
-  font-size: 24px;
+  width: 28px;
+  height: 28px;
+  color: var(--color-accent);
 }
 
 .footer__logo-text {

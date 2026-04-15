@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Vision from './pages/Vision';
 import Story from './pages/Story';
+import Updates from './pages/Updates';
+import UpdateDetail from './pages/UpdateDetail';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -24,6 +26,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/vision" element={<Vision />} />
           <Route path="/story" element={<Story />} />
+          <Route path="/updates" element={<Updates />} />
+          <Route path="/updates/:id" element={<UpdateDetail />} />
         </Routes>
       </main>
     </Router>

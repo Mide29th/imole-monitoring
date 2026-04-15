@@ -1,0 +1,186 @@
+/* ============================================
+   UPDATES PAGE STYLES
+   ============================================ */
+
+.updates {
+  background: var(--color-background);
+  min-height: 100vh;
+}
+
+/* === Hero Section === */
+.updates__hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  padding: 160px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.updates__hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 195, 0, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+
+.updates__label {
+  display: inline-block;
+  background: rgba(255, 195, 0, 0.1);
+  color: var(--color-accent);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 195, 0, 0.2);
+}
+
+.updates__title {
+  font-size: clamp(36px, 5vw, 56px);
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 24px;
+  font-weight: 900;
+  max-width: 800px;
+}
+
+.updates__title-accent {
+  color: var(--color-accent);
+}
+
+.updates__intro {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+/* === Updates Grid === */
+.updates__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+/* === Update Card === */
+.update-card {
+  background: rgba(0, 104, 56, 0.05);
+  border: 1px solid rgba(0, 104, 56, 0.3);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.update-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 195, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.update-card__image-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.update-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.update-card:hover .update-card__image {
+  transform: scale(1.05);
+}
+
+.update-card__category {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.update-card__content {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.update-card__date {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.update-card__title {
+  font-size: 20px;
+  color: var(--color-accent);
+  line-height: 1.4;
+  margin-bottom: 16px;
+  font-weight: 700;
+  transition: color var(--transition-base);
+}
+
+.update-card:hover .update-card__title {
+  color: var(--color-accent);
+}
+
+.update-card__excerpt {
+  font-size: 15px;
+  color: var(--color-primary-light);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.update-card__link {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 0;
+  transition: gap var(--transition-base);
+}
+
+.update-card__link:hover {
+  gap: 12px;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 768px) {
+  .updates__hero {
+    padding: 120px 0 60px;
+  }
+
+  .updates__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .update-card__title {
+    font-size: 18px;
+  }
+}

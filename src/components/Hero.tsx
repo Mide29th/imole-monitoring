@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ElectionCountdown from './ElectionCountdown';
 import './Hero.css';
 
@@ -46,9 +47,9 @@ const Hero = () => {
                 <path d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
             </a>
-            <a href="/story" className="btn btn-outline">
+            <Link to="/story" className="btn btn-outline">
               The Governor's Story
-            </a>
+            </Link>
           </div>
           <div className="hero__social">
             <span className="hero__social-label">Follow the Governor</span>

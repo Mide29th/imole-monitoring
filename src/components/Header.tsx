@@ -55,6 +55,12 @@ const Header = () => {
             Our Vision
           </Link>
           <Link
+            to="/updates"
+            className={`header__link ${location.pathname === '/updates' ? 'header__link--active' : ''}`}
+          >
+            Updates
+          </Link>
+          <Link
             to="/story"
             className={`header__link ${location.pathname === '/story' ? 'header__link--active' : ''}`}
           >

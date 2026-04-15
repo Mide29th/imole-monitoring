@@ -225,6 +225,11 @@
     justify-content: center;
     flex-direction: column;
     gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .hero__portrait {
+    order: -1;
   }
 
   .hero__portrait {
@@ -232,18 +237,51 @@
   }
 
   .hero__portrait-img {
-    max-height: 400px;
+    max-height: 320px;
   }
 
+  .hero__inner {
+    padding-top: 24px;
+    padding-bottom: 80px;
+    gap: 32px;
+  }
 
+  .hero__title {
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 16px;
+  }
+
+  .hero__subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .hero__actions {
+    margin-bottom: 32px;
+  }
 }
 
 @media (max-width: 480px) {
   .hero__title {
-    font-size: 32px;
+    font-size: 28px;
   }
   
   .hero__portrait-img {
-    max-height: 300px;
+    max-height: 260px;
+  }
+
+  .hero__badge {
+    padding: 6px 16px;
+    font-size: 11px;
+    margin-bottom: 16px;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .hero__title {
+    font-size: clamp(24px, 10vw, 32px);
+    margin-bottom: 12px;
   }
 }

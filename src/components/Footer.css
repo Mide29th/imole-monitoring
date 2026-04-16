@@ -114,6 +114,16 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
+.footer__dev-link {
+  color: inherit;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.footer__dev-link:hover {
+  color: var(--color-accent);
+}
+
 .footer__bottom-links {
   display: flex;
   gap: 24px;

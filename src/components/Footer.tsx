@@ -67,7 +67,7 @@ const Footer = () => {
       <div className="footer__bottom">
         <div className="container">
           <p className="footer__legal">
-           Tope Lanlehin and Joshua Babawale © {new Date().getFullYear()} Imole Campaign. All rights reserved.
+           Temitope Lanlehin and <a href="https://joshuababawale.vercel.app" target="_blank" rel="noopener noreferrer" className="footer__dev-link">Joshua Babawale</a> © {new Date().getFullYear()} <a href="https://joshuababawale.vercel.app" target="_blank" rel="noopener noreferrer" className="footer__dev-link">Mide29th</a>. All rights reserved.
           </p>
           <div className="footer__bottom-links">
             <a href="#" className="footer__bottom-link">Privacy Policy</a>
